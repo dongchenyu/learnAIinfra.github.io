@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>cuda配置 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://dongchenyu.github.io/index.html">
+  <meta name="description" content="AutoDL配置cuda由于没有NV的显卡，所以学习cuda的时候我都是在autoDL上租的，大概1个小时2块左右。ssh登录之后，输入nvcc –version 有一定概率显示 not found，这个大概率不是因为没有显卡，没有的话根本租不了，可以用 1nvidia-smi 确认一下，如果有信息的话说明没问题，然后这个时候需要配置下环境变量 12export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cuda配置">
+<meta property="og:url" content="https://dongchenyu.github.io/2026/05/24/cuda%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="AutoDL配置cuda由于没有NV的显卡，所以学习cuda的时候我都是在autoDL上租的，大概1个小时2块左右。ssh登录之后，输入nvcc –version 有一定概率显示 not found，这个大概率不是因为没有显卡，没有的话根本租不了，可以用 1nvidia-smi 确认一下，如果有信息的话说明没问题，然后这个时候需要配置下环境变量 12export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;c">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-24T05:19:56.000Z">
+<meta property="article:modified_time" content="2026-05-24T05:24:32.149Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-cuda配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-cuda配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/05/24/cuda%E9%85%8D%E7%BD%AE/" class="article-date">
   <time class="dt-published" datetime="2026-05-24T05:19:56.000Z" itemprop="datePublished">2026-05-24</time>
@@ -84,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/05/24/cuda%E9%85%8D%E7%BD%AE/">cuda配置</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      cuda配置
     </h1>
   
 
@@ -110,105 +112,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-搭建github博客网站" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/05/23/%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" class="article-date">
-  <time class="dt-published" datetime="2026-05-23T12:34:21.000Z" itemprop="datePublished">2026-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/05/23/%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">搭建github博客网站</a>
-    </h1>
+    <a href="/2026/05/23/%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搭建github博客网站</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>###一、整体原理（先建立概念）</p>
-<p>GitHub Pages 本质上是：GitHub 免费帮你托管静态网页。<br>也就是说：你写Markdown文章，然后Hexo&#x2F;Hugo&#x2F;Jekyll<br>帮你生成HTML网页再推送到 GitHub。GitHub 自动帮你变成博客网站。最终你会得到：<br>https:&#x2F;&#x2F;你的用户名.github.io<br>比如：<br><a target="_blank" rel="noopener" href="https://abc.github.io/">https://abc.github.io</a></p>
-<p>以后写博客流程（非常简单）</p>
-<p>以后你只需要：</p>
-<p>写文章<br>hexo new “kv-cache”<br>本地预览<br>hexo server<br>发布<br>hexo clean<br>hexo generate<br>hexo deploy</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dongchenyu.github.io/2026/05/23/%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" data-id="cuidaXbCIXJVOOhlACjl5kFiU" data-title="搭建github博客网站" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/05/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2026-05-23T12:31:31.572Z" itemprop="datePublished">2026-05-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/05/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dongchenyu.github.io/2026/05/23/hello-world/" data-id="cuidWw7rL-fkaMiahxOnK3L6g" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
